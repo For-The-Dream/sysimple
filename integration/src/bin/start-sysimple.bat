@@ -1,0 +1,1 @@
+java -jar %cd%/../lib/init-0.0.2.jar %cd%/../server/webapp/web.war
