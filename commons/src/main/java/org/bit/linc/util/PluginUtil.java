@@ -52,14 +52,10 @@ public class PluginUtil {
 			throw new SysimpleException("no shell in "+pluginName);
 		}
 		String [] files=shells.list();
-		if(files.length!=0){
-			for(int i=0;i<files.length;i++){
-				if(files[i].endsWith("sh")){
-					shellList.add(files[i]);
-				}
+		for(int i=0;i<files.length;i++){
+			if(files[i].endsWith("sh")){
+				shellList.add(files[i]);
 			}
-		}else{
-			
 		}
 		return shellList;
 	}
