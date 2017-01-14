@@ -25,6 +25,17 @@ xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assemb
       </includes>  
       <outputDirectory>bin</outputDirectory>  
     </fileSet>
+    <fileSet>  
+      <directory>src/conf</directory>  
+      <includes>
+        <include>*.*</include>  
+      </includes>  
+      <outputDirectory>conf</outputDirectory>  
+    </fileSet>
+    <fileSet>  
+      <directory>src/plugins</directory>  
+      <outputDirectory>plugins</outputDirectory>
+    </fileSet>
   </fileSets>
   <files>
 	<!-- 将web子项目的war包放到发行包server/webapp下-->

@@ -1,1 +1,1 @@
-java -jar %cd%/../lib/init-0.0.2.jar %cd%/../server/webapp/web.war
+java -jar ../server/webapp/web.war -Dsysimple.conf=../conf -Dsysimple.plugins=../plugins

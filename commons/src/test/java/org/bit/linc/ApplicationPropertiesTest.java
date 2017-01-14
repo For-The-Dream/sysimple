@@ -1,8 +1,8 @@
 package org.bit.linc;
 
-import static org.junit.Assert.*;
 
 import org.apache.commons.configuration.Configuration;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class ApplicationPropertiesTest {
@@ -11,7 +11,7 @@ public class ApplicationPropertiesTest {
 	public void ConfigurationTest() throws SysimpleException{
 		Configuration configuration=ApplicationProperties.get();
 		int test=configuration.getInt("sysimple.webserver.minthreads");
-		System.out.println(test);
+		Assert.assertEquals(test, 1000);
 	}
 
 }
