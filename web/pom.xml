@@ -74,7 +74,7 @@
 	      <groupId>org.eclipse.jetty</groupId>  
 	      <artifactId>jetty-plus</artifactId>  
 	    </dependency>
-	    <dependency>  
+	    <dependency>
 	      <groupId>org.eclipse.jetty</groupId>  
 	      <artifactId>jetty-policy</artifactId>   
 	    </dependency>
@@ -113,28 +113,6 @@
 	    <dependency>
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>servlet-api</artifactId>
-		</dependency>
-		<!-- support for jsp -->
-	    <dependency>
-		    <groupId>org.eclipse.jdt</groupId>
-		    <artifactId>org.eclipse.jdt.core</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.eclipse.jetty.orbit</groupId>
-		    <artifactId>org.apache.taglibs.standard.glassfish</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.eclipse.jetty.orbit</groupId>
-		    <artifactId>org.apache.jasper.glassfish</artifactId>
-		</dependency>
-		
-		<dependency>
-		    <groupId>org.eclipse.jetty.orbit</groupId>
-		    <artifactId>com.sun.el</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.eclipse.jetty.orbit</groupId>
-		    <artifactId>javax.el</artifactId>
 		</dependency>
 		
   </dependencies>

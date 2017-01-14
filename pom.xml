@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.bit.linc</groupId>
@@ -10,6 +11,8 @@
   <!-- Properties -->  
   <properties>   
     <jetty.version>7.6.21.v20160908</jetty.version>
+    <apache.commons>1.8</apache.commons>
+    <junit.version>4.11</junit.version>
 	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>  
   
@@ -18,7 +21,7 @@
 		    <dependency>
 		      <groupId>junit</groupId>
 		      <artifactId>junit</artifactId>
-		      <version>3.8.1</version>
+		      <version>${junit.version}</version>
 		      <scope>test</scope>
 		    </dependency>
 	        <dependency>
@@ -126,35 +129,11 @@
 			    <artifactId>servlet-api</artifactId>
 			    <version>2.5</version>
 			</dependency>
-			
-			
-			<!-- support for jsp -->
-		    <dependency>
-			    <groupId>org.eclipse.jdt</groupId>
-			    <artifactId>org.eclipse.jdt.core</artifactId>
-			    <version>3.7.1</version>
-			</dependency>
 			<dependency>
-			    <groupId>org.eclipse.jetty.orbit</groupId>
-			    <artifactId>org.apache.taglibs.standard.glassfish</artifactId>
-			    <version>1.2.0.v201112081803</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.eclipse.jetty.orbit</groupId>
-			    <artifactId>org.apache.jasper.glassfish</artifactId>
-			    <version>2.1.0.v201110031002</version>
-			</dependency>
-			
-			<dependency>
-			    <groupId>org.eclipse.jetty.orbit</groupId>
-			    <artifactId>com.sun.el</artifactId>
-			    <version>1.0.0.v201105211818</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.eclipse.jetty.orbit</groupId>
-			    <artifactId>javax.el</artifactId>
-			    <version>2.1.0.v201105211819</version>
-			</dependency>
+		        <groupId>commons-configuration</groupId>
+		        <artifactId>commons-configuration</artifactId>
+		        <version>${apache.commons}</version>
+		    </dependency>
 	  </dependencies>
   </dependencyManagement>
   
@@ -162,5 +141,6 @@
   <modules>
   	<module>web</module>
   	<module>integration</module>
+    <module>commons</module>
   </modules>
 </project>
