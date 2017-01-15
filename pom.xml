@@ -140,7 +140,7 @@
   
   <modules>
   	<module>web</module>
-  	<module>integration</module>
     <module>commons</module>
+    <module>integration</module>
   </modules>
 </project>

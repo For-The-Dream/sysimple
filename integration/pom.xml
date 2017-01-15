@@ -51,11 +51,11 @@
       <scope>test</scope>
     </dependency>
     
-    <dependency>
+    <!-- <dependency>
      	<groupId>org.bit.linc</groupId>
-  		<artifactId>init</artifactId>
+  		<artifactId>web</artifactId>
   		<version>${project.version}</version>
-	</dependency>
+	</dependency> -->
     
   </dependencies>
 </project>

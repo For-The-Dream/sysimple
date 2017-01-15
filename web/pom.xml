@@ -34,7 +34,7 @@
                 </configuration>
          </plugin>
          <!-- move mainclass to first level of web.war -->
-         <plugin>  
+        <!--  <plugin>  
                 <groupId>org.apache.maven.plugins</groupId>  
                 <artifactId>maven-antrun-plugin</artifactId>  
                 <version>1.7</version>  
@@ -57,7 +57,7 @@
                     </execution>  
                 </executions>  
             </plugin> 
-            <!-- unpack jetty dependencies so that  mainClass can run  --> 
+            unpack jetty dependencies so that  mainClass can run  
             <plugin>  
                 <groupId>org.apache.maven.plugins</groupId>  
                 <artifactId>maven-dependency-plugin</artifactId>  
@@ -71,7 +71,7 @@
                         </goals>  
                         <configuration>  
                             <includeGroupIds>org.eclipse.jetty,org.eclipse.jetty.orbit</includeGroupIds>
-                            <!-- remove some files in order to decrease size -->  
+                            remove some files in order to decrease size  
                             <excludes>*, about_files/*, META-INF/*</excludes>  
                             <outputDirectory>  
                                 ${project.build.directory}/${project.artifactId}  
@@ -79,7 +79,7 @@
                         </configuration>  
                     </execution>
                 </executions>  
-            </plugin>     
+            </plugin>     --> 
  	</plugins>
   </build>
   
