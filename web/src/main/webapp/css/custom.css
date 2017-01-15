@@ -1,0 +1,90 @@
+.custom-bg-red{
+	background-color:red
+}
+
+.custom-bg-yellow{
+	background-color:yellow
+}
+
+.custom-bg-blue{
+	background-color:blue
+}
+
+
+.custom-bg-dark-green{
+	background-color:#34495E	
+}
+
+.custom-color-light-green{
+	color:#1abc9c!important
+}
+
+.custom-color-black{
+	color:black
+}
+
+.custom-color-white{
+	color:white
+}
+
+.custom-color-orange{
+	color:#FE8074
+}
+
+.custom-bg-transparent{
+	background:transparent
+}
+
+.custom-list-group-item,
+.custom-list-group-item>a{
+	background:transparent;
+	color:white;
+	font-size:14px;
+	border-left:none;
+	border-right:none;
+	border-bottom-right-radius:0!important;
+	border-bottom-left-radius:0!important;
+	border-top-left-radius:0!important;
+	border-top-right-radius:0!important
+}
+
+.custom-list-group-item>a:hover{
+	color:#1abc9c;
+	font-weight:bold
+}
+
+.custom-icon{
+	color:#1abc9c;
+	margin:0 8px 0 0
+}
+
+.custom-little-icon{
+	margin:0 6px 0 12px;
+}
+
+.custom-panel-green {
+  border-color: #1abc9c;
+}
+.custom-panel-green > .panel-heading {
+  color: white;
+  font-size:14px;
+  padding:1px 6px;
+  background-color: #1abc9c;
+  border-color: #1abc9c;
+}
+.custom-panel-green > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color:#1abc9c;
+}
+.custom-panel-green > .panel-heading .badge {
+  color: white;
+  background-color:#1abc9c;
+}
+.custom-panel-green > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #1abc9c;
+}
+
+
+.tmp,
+.tmp>p{
+	margin:0px 10px;
+}
