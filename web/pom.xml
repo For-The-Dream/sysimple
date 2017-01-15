@@ -7,11 +7,9 @@
     <artifactId>sysimple</artifactId>
     <version>0.0.2</version>
   </parent>
-
   <artifactId>web</artifactId>
   <packaging>war</packaging>
   <url>http://maven.apache.org</url>
-  
   <build>
   	<!-- 定义编译后的名字 ,这里不带版本号更方便一些-->
 	<finalName>${project.name}</finalName>
