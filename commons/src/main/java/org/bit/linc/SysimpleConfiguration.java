@@ -5,8 +5,8 @@ import org.apache.commons.configuration.Configuration;
 public enum SysimpleConfiguration {
 	
 	//这里可以添加属性和默认值如
-	 WEBSERVER_MIN_THREADS("sysimple.webserver.minthreads", 10),
-	 WEBSERVER_MAX_THREADS("sysimple.webserver.maxthreads", 100);
+	WEBSERVER_MIN_THREADS("sysimple.webserver.minthreads", 10),
+	WEBSERVER_MAX_THREADS("sysimple.webserver.maxthreads", 100);
 	
 	private static final Configuration SYSIMPLE_PROPERTIES;
 
