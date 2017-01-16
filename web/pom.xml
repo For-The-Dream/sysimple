@@ -23,16 +23,39 @@
                 <groupId>org.apache.maven.plugins</groupId>  
                 <artifactId>maven-war-plugin</artifactId>  
                 <version>2.3</version>  
-                <configuration>  
+                <configuration>
                     <archive>
                         <manifest>
                             <mainClass>org.bit.linc.web.StartWeb</mainClass>  
                         </manifest>
                     </archive>
                 </configuration>
-         </plugin>
-         <!-- move mainclass to first level of web.war -->
-         <plugin>  
+         </plugin>      
+            <!-- unpack jetty dependencies so that  mainClass can run  --> 
+            <plugin>  
+                <groupId>org.apache.maven.plugins</groupId>  
+                <artifactId>maven-dependency-plugin</artifactId>  
+                <version>2.5.1</version>  
+                <executions>  
+                    <execution>
+                        <id>jetty-classpath</id>  
+                        <phase>prepare-package</phase>  
+                        <goals>
+                            <goal>unpack-dependencies</goal>  
+                        </goals>
+                        <configuration>  
+                            <includeGroupIds>org.eclipse.jetty,org.bit.linc,commons-configuration,commons-lang,commons-logging</includeGroupIds>
+                            <!-- remove some files in order to decrease size   -->
+                            <excludes>*, about_files/*, META-INF/*</excludes>  
+                            <outputDirectory>  
+                                ${project.build.directory}/${project.artifactId}  
+                            </outputDirectory>  
+                        </configuration>  
+                    </execution>
+                </executions>  
+            </plugin>
+             <!-- move mainclass to first file level of web.war -->
+         	<plugin>  
                 <groupId>org.apache.maven.plugins</groupId>  
                 <artifactId>maven-antrun-plugin</artifactId>  
                 <version>1.7</version>  
@@ -41,12 +64,12 @@
                         <id>main-class-placement</id>  
                         <phase>prepare-package</phase>  
                         <configuration>  
-                            <target>  
-                                <move todir="${project.build.directory}/${project.artifactId}/">  
+                            <target>
+                                <copy todir="${project.build.directory}/${project.artifactId}/">  
                                     <fileset dir="${project.build.directory}/classes/">  
                                         <include name="org/bit/linc/web/StartWeb.class" />  
                                     </fileset>  
-                                </move>
+                                </copy>
                             </target>  
                         </configuration>  
                         <goals>  
@@ -54,30 +77,7 @@
                         </goals>  
                     </execution>  
                 </executions>  
-            </plugin> 
-            <!-- unpack jetty dependencies so that  mainClass can run  --> 
-            <plugin>  
-                <groupId>org.apache.maven.plugins</groupId>  
-                <artifactId>maven-dependency-plugin</artifactId>  
-                <version>2.5.1</version>  
-                <executions>  
-                    <execution>  
-                        <id>jetty-classpath</id>  
-                        <phase>prepare-package</phase>  
-                        <goals>  
-                            <goal>unpack-dependencies</goal>  
-                        </goals>  
-                        <configuration>  
-                            <includeGroupIds>org.eclipse.jetty,org.eclipse.jetty.orbit</includeGroupIds>
-                            <!-- remove some files in order to decrease size -->  
-                            <excludes>*, about_files/*, META-INF/*</excludes>  
-                            <outputDirectory>  
-                                ${project.build.directory}/${project.artifactId}  
-                            </outputDirectory>  
-                        </configuration>  
-                    </execution>
-                </executions>  
-            </plugin>     
+            </plugin>      
  	</plugins>
   </build>
   
@@ -87,90 +87,18 @@
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
+    	<dependency>
+    		<groupId>org.bit.linc</groupId>
+    		<artifactId>commons</artifactId>
+    		<version>${project.version}</version>
+    	</dependency>
         <dependency>
 		    <groupId>org.eclipse.jetty</groupId>
 		    <artifactId>jetty-server</artifactId>
-		    </dependency>
-		<dependency>
-		    <groupId>org.eclipse.jetty</groupId>
-		    <artifactId>jetty-servlet</artifactId>
-		</dependency>
-		<dependency>
-		    <groupId>org.eclipse.jetty</groupId>
-		    <artifactId>jetty-servlets</artifactId>
 		</dependency>
 		<dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-webapp</artifactId>
         </dependency>
-         <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-util</artifactId>   
-	    </dependency>
-        <dependency>
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-io</artifactId>   
-	    </dependency>
-	     <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-xml</artifactId>  
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-security</artifactId>  
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-jmx</artifactId>   
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-overlay-deployer</artifactId>   
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-plus</artifactId>  
-	    </dependency>
-	    <dependency>
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-policy</artifactId>   
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-rewrite</artifactId>   
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-ajp</artifactId>  
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-annotations</artifactId>  
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-client</artifactId>  
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-continuation</artifactId>  
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-deploy</artifactId>    
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-http</artifactId>    
-	    </dependency>
-	    <dependency>  
-	      <groupId>org.eclipse.jetty</groupId>  
-	      <artifactId>jetty-websocket</artifactId>  
-	    </dependency>
-	    <dependency>
-		    <groupId>javax.servlet</groupId>
-		    <artifactId>servlet-api</artifactId>
-		</dependency>
-		
   </dependencies>
 </project>

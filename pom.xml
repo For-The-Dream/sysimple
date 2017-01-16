@@ -30,105 +30,10 @@
 			    <version>${jetty.version}</version>
 			</dependency>
 			<dependency>
-			    <groupId>org.eclipse.jetty</groupId>
-			    <artifactId>jetty-servlet</artifactId>
-			    <version>${jetty.version}</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.eclipse.jetty</groupId>
-			    <artifactId>jetty-servlets</artifactId>
-			    <version>${jetty.version}</version>
-			</dependency>
-			<dependency>
 	            <groupId>org.eclipse.jetty</groupId>
 	            <artifactId>jetty-webapp</artifactId>
 	            <version>${jetty.version}</version>
 	        </dependency>
-	         <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-util</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-	        <dependency>
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-io</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		     <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-xml</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-security</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-jmx</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-overlay-deployer</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-plus</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-policy</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-rewrite</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-ajp</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-annotations</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-client</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-continuation</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-deploy</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-http</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>  
-		      <groupId>org.eclipse.jetty</groupId>  
-		      <artifactId>jetty-websocket</artifactId>  
-		      <version>${jetty.version}</version>  
-		    </dependency>
-		    <dependency>
-			    <groupId>javax.servlet</groupId>
-			    <artifactId>servlet-api</artifactId>
-			    <version>2.5</version>
-			</dependency>
 			<dependency>
 		        <groupId>commons-configuration</groupId>
 		        <artifactId>commons-configuration</artifactId>
@@ -140,7 +45,7 @@
   
   <modules>
   	<module>web</module>
-  	<module>integration</module>
     <module>commons</module>
+    <module>integration</module>
   </modules>
 </project>

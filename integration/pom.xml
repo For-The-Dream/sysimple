@@ -50,12 +50,5 @@
       <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
-    
-    <dependency>
-     	<groupId>org.bit.linc</groupId>
-  		<artifactId>web</artifactId>
-  		<version>${project.version}</version>
-	</dependency>
-    
   </dependencies>
 </project>
