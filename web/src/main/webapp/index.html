@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="flat-ui/dist/css/flat-ui.css">
+	<!-- <link rel="stylesheet" href="flat-ui/dist/css/flat-ui.css"> -->
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="css/custom.css">
@@ -15,7 +15,7 @@
 
 <!-- top-navigator -->
 <div class="container">
-	<nav class="navbar navbar-inverse" role="navigation">
+	<nav class="navbar navbar-inverse custom-bg-dark-green custom-color-white" role="navigation">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-send custom-icon custom-color-light-green"></span>SySimple</a>
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main-menu"></button>
@@ -26,13 +26,13 @@
 		        	<div class="input-group">
 		        		<input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
 			       		<span class="input-group-btn">
-			       			<button type="submit" class="btn"><span class="fui-search"></span></button>
+			       			<button type="submit" class="btn custom-bg-light-green"><span class="glyphicon glyphicon-search"></span></button>
 			        	</span>	
 		       		</div>
 	      		</div>
 	    	</form>	
    			<ul class="nav navbar-nav navbar-right">
-      			<li class="active"><a href="#fakelink">Home</a></li>
+      			<li><a href="#fakelink">Home</a></li>
       			<li><a href="#fakelink">Documents</a></li>
       			<li><a href="#fakelink">About Us</a></li>
     		</ul>
@@ -46,9 +46,9 @@
 <div class="container">
 	<div class="row">
 		<!-- left-navigator -->
-		<div class="col-xs-5 col-sm-4 col-md-3">
+		<div class="col-xs-5 col-sm-4 col-md-3 col-lg-3">
 			<div class="panel panel-info custom-bg-dark-green custom-color-white">
-				<div class="panel-body">
+				<div class="panel-body custom-nav-panel">
 					<p><span class="glyphicon glyphicon-th custom-icon"></span>Clusters Management</p>
 					<ul class="list-group">
 						<li class="list-group-item custom-list-group-item"><a href="#"><span class="glyphicon glyphicon-unchecked custom-little-icon"></span>Create Cluster</a></li>			
@@ -72,7 +72,7 @@
 		</div>
 		
 		<!-- main content area -->
-		<div class="col-xs-7 col-sm-8 col-md-9">
+		<div class="col-xs-7 col-sm-8 col-md-9 col-lg-9">
 			<div class="panel custom-panel-green">
 				<div class="panel-heading">Scripts Status</div>
 				<div class="panel-body tmp">

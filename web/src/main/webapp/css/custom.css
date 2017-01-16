@@ -15,6 +15,11 @@
 	background-color:#34495E	
 }
 
+.custom-bg-light-green{
+	background-color:#1abc9c
+}
+
+
 .custom-color-light-green{
 	color:#1abc9c!important
 }
@@ -50,7 +55,8 @@
 
 .custom-list-group-item>a:hover{
 	color:#1abc9c;
-	font-weight:bold
+	font-weight:bold;
+	text-decoration:none
 }
 
 .custom-icon{
@@ -62,9 +68,15 @@
 	margin:0 6px 0 12px;
 }
 
+.custom-nav-panel{
+	min-height:760px
+}
+
+
 .custom-panel-green {
   border-color: #1abc9c;
 }
+
 .custom-panel-green > .panel-heading {
   color: white;
   font-size:14px;
@@ -83,6 +95,33 @@
   border-bottom-color: #1abc9c;
 }
 
+
+/* navbar settings */
+.navbar-inverse .navbar-brand {
+  color: #fff;
+  font-weight:bold;
+  padding:10px 0px 6px 18px;
+  font-size:26px;
+  font-family:Helvetica;
+  font-style:italic;
+}
+
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #1abc9c;
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+  font-family:Helvetica;
+  font-weight:bold;
+  font-size:16px
+}
+.navbar-inverse .navbar-nav > li > a:hover{
+  background-color:#1abc9c
+}
+/* end of navbar settings */
 
 .tmp,
 .tmp>p{
